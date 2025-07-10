@@ -1,0 +1,51 @@
+meta {
+	name = "Vyres";
+	description="Where is this?";
+}
+// Show untradeables
+apply (tradeable:false) {
+	color = WHITE;
+}
+
+//Hide anything below 10k
+apply (value:<10000 && tradeable:true) {
+	hidden = true;
+}
+
+// Global Hide
+// Things in here will be hidden NO MATTER WHAT
+#define GLOBAL_HIDE_LIST[]
+
+rule (name:GLOBAL_HIDE_LIST) {
+  hidden = true;
+}
+
+//Anything above 10k have simple Cyan text
+apply (value:>10000) {
+	color = CYAN;
+}
+
+// 1M and above, TLDR Blood Shards
+rule (value:>999999){
+	icon = Item(24777);
+	color = RED;
+	backgroundColor = WHITE;
+	borderColor = RED;
+	showLootbeam = true;
+	textAccent = 3;
+	showValue = true;
+	notify = true;
+	sound = "tink.wav";
+}
+
+// Rune Kites and Full Helms, Onyx Bolt tips
+// Plays a subtle sound, the one chaos orbs do in PoE
+//ownership:1 so it only triggers sound for my drops
+// I don't want hear rune kites etc from others miles away
+rule (value:>=20000 && value:<999999 && ownership:1) {
+	icon = Item(1004);
+	color = CYAN;
+	borderColor = CYAN;
+	showLootbeam = true;
+	sound = "AlertSound1.wav";
+}
