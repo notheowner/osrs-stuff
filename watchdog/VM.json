@@ -1,0 +1,185 @@
+{
+  "type": "AlertGroup",
+  "alerts": [
+    {
+      "type": "ChatAlert",
+      "message": "The current boulder stage is complete.",
+      "regexEnabled": false,
+      "gameMessageType": "GAME_MESSAGE",
+      "enabled": true,
+      "name": "VM Boulder finished",
+      "debounceTime": 0,
+      "randomNotifications": false,
+      "notifications": [
+        {
+          "type": "Overlay",
+          "color": "#46FF0000",
+          "textColor": "#FFFFFFFF",
+          "sticky": false,
+          "timeToLive": 3,
+          "imagePath": "",
+          "message": "KEEP MOVING",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        },
+        {
+          "type": "Sound",
+          "path": "D:\\keep_moving.mp3",
+          "repeatDuration": 0,
+          "gain": 10,
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        },
+        {
+          "type": "Overhead",
+          "displayTime": 3,
+          "message": "KEEP MOVING!",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        }
+      ]
+    },
+    {
+      "type": "ChatAlert",
+      "message": "The platform beneath you will disappear soon!",
+      "regexEnabled": false,
+      "gameMessageType": "ANY",
+      "enabled": true,
+      "name": "VM Platform",
+      "debounceTime": 0,
+      "randomNotifications": false,
+      "notifications": [
+        {
+          "type": "TextToSpeech",
+          "gain": 10,
+          "rate": 1,
+          "voice": "LINDA",
+          "source": "ELEVEN_LABS",
+          "elevenLabsVoiceId": "tQ4MEZFJOzsahSEEZtHK",
+          "message": "PLATFORM!",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        },
+        {
+          "type": "Overhead",
+          "displayTime": 5,
+          "message": "PLATFORM!!!!",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        }
+      ]
+    },
+    {
+      "type": "ChatAlert",
+      "message": "Fix your vent!",
+      "regexEnabled": false,
+      "gameMessageType": "GAME_MESSAGE",
+      "enabled": true,
+      "name": "A and B/C Vent Fix",
+      "debounceTime": 200,
+      "randomNotifications": false,
+      "notifications": [
+        {
+          "type": "TextToSpeech",
+          "gain": 10,
+          "rate": 1,
+          "voice": "LINDA",
+          "source": "ELEVEN_LABS",
+          "elevenLabsVoiceId": "cgSgspJ2msm6clMCkdW9",
+          "message": "FIX YOUR VENT!",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        },
+        {
+          "type": "Overlay",
+          "color": "#46FF0000",
+          "textColor": "#FFFFFFFF",
+          "sticky": false,
+          "timeToLive": 5,
+          "imagePath": "",
+          "message": "FIX YOUR VENT!",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        }
+      ]
+    },
+    {
+      "type": "ChatAlert",
+      "message": "The vents will shift in 25 seconds!",
+      "regexEnabled": false,
+      "gameMessageType": "GAME_MESSAGE",
+      "enabled": true,
+      "name": "5Min Reset",
+      "debounceTime": 0,
+      "randomNotifications": false,
+      "notifications": [
+        {
+          "type": "TextToSpeech",
+          "gain": 7,
+          "rate": 1,
+          "voice": "GEORGE",
+          "source": "ELEVEN_LABS",
+          "elevenLabsVoiceId": "cgSgspJ2msm6clMCkdW9",
+          "message": "RESET you MORON!",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 25000
+        }
+      ]
+    },
+    {
+      "type": "ChatAlert",
+      "message": "Stability Update: -(1[7-9]|[2-9]\\d|\\d{3,})",
+      "regexEnabled": true,
+      "gameMessageType": "ANY",
+      "enabled": true,
+      "name": "Tactical Nuke -17 stab",
+      "debounceTime": 10000,
+      "randomNotifications": false,
+      "notifications": [
+        {
+          "type": "Sound",
+          "path": "C:\\Users\\owner\\Desktop\nuke.mp3",
+          "repeatDuration": 0,
+          "gain": 5,
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        },
+        {
+          "type": "Overlay",
+          "color": "#46FF0000",
+          "textColor": "#FFFFFFFF",
+          "sticky": false,
+          "timeToLive": 5,
+          "imagePath": "C:\\Users\\owner\\Desktop\\3.png",
+          "message": "WHEYYYY nice reset",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        }
+      ]
+    }
+  ],
+  "enabled": false,
+  "name": "Volcanic Mine",
+  "debounceTime": 0,
+  "randomNotifications": false
+}
