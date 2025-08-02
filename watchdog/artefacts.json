@@ -1,0 +1,178 @@
+{
+  "type": "AlertGroup",
+  "alerts": [
+    {
+      "type": "ChatAlert",
+      "message": "You can\u0027t light a fire here.",
+      "regexEnabled": false,
+      "gameMessageType": "ANY",
+      "enabled": true,
+      "name": "Can\u0027t light a fire here",
+      "debounceTime": 0,
+      "randomNotifications": false,
+      "notifications": [
+        {
+          "type": "TextToSpeech",
+          "gain": 6,
+          "rate": 1,
+          "voice": "GEORGE",
+          "source": "ELEVEN_LABS",
+          "elevenLabsVoiceId": "SAz9YHcvj6GT2YYXdXww",
+          "message": "NO FIRE!",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        },
+        {
+          "type": "Overhead",
+          "displayTime": 3,
+          "message": "NO FIRE!",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        }
+      ]
+    },
+    {
+      "type": "ChatAlert",
+      "message": "*south eastern*",
+      "regexEnabled": false,
+      "gameMessageType": "DIALOG",
+      "enabled": true,
+      "name": "Artefacts SE House",
+      "debounceTime": 0,
+      "randomNotifications": false,
+      "notifications": [
+        {
+          "type": "Overlay",
+          "color": "#5C03A5FF",
+          "textColor": "#FF2D84FF",
+          "sticky": false,
+          "timeToLive": 5,
+          "imagePath": "",
+          "message": "SOUTH EAST HOUSE",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        },
+        {
+          "type": "TextToSpeech",
+          "gain": 10,
+          "rate": 1,
+          "voice": "GEORGE",
+          "source": "ELEVEN_LABS",
+          "elevenLabsVoiceId": "tQ4MEZFJOzsahSEEZtHK",
+          "message": "South East House",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        }
+      ]
+    },
+    {
+      "type": "ChatAlert",
+      "message": "*south west*",
+      "regexEnabled": false,
+      "gameMessageType": "DIALOG",
+      "enabled": true,
+      "name": "Artefacts SW House Clone",
+      "debounceTime": 0,
+      "randomNotifications": false,
+      "notifications": [
+        {
+          "type": "Overlay",
+          "color": "#5C03A5FF",
+          "textColor": "#FF2D84FF",
+          "sticky": false,
+          "timeToLive": 5,
+          "imagePath": "",
+          "message": "SOUTH WEST HOUSE",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        },
+        {
+          "type": "TextToSpeech",
+          "gain": 10,
+          "rate": 1,
+          "voice": "GEORGE",
+          "source": "ELEVEN_LABS",
+          "elevenLabsVoiceId": "tQ4MEZFJOzsahSEEZtHK",
+          "message": "RUN SOUTH WEST",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        }
+      ]
+    },
+    {
+      "type": "ChatAlert",
+      "message": "The Book of the Dead now has 0 memories remaining.",
+      "regexEnabled": false,
+      "gameMessageType": "ANY",
+      "enabled": true,
+      "name": "Charge your book overlay",
+      "debounceTime": 0,
+      "randomNotifications": false,
+      "notifications": [
+        {
+          "type": "TextToSpeech",
+          "gain": 10,
+          "rate": 1,
+          "voice": "GEORGE",
+          "source": "ELEVEN_LABS",
+          "elevenLabsVoiceId": "tQ4MEZFJOzsahSEEZtHK",
+          "message": "Charge your book",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        },
+        {
+          "type": "Overlay",
+          "color": "#46FF0000",
+          "textColor": "#FFFFFFFF",
+          "sticky": true,
+          "timeToLive": 5,
+          "imagePath": "",
+          "id": "book_charge",
+          "message": "CHARGE THE BOOK YOU MUPPET",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        }
+      ]
+    },
+    {
+      "type": "ChatAlert",
+      "message": "The Book of the Dead now has 250 charges.*",
+      "regexEnabled": true,
+      "gameMessageType": "DIALOG",
+      "enabled": true,
+      "name": "Dismiss book charge overlay",
+      "debounceTime": 0,
+      "randomNotifications": false,
+      "notifications": [
+        {
+          "type": "DismissOverlay",
+          "dismissId": "book_charge",
+          "fireWhenFocused": true,
+          "fireWhenAFK": false,
+          "fireWhenAFKForSeconds": 5,
+          "delayMilliseconds": 0
+        }
+      ]
+    }
+  ],
+  "enabled": true,
+  "name": "Artefacts",
+  "debounceTime": 0,
+  "randomNotifications": false
+}
